@@ -4,7 +4,7 @@ AI-powered code intelligence extension for ERPNext that brings static analysis, 
 
 This extension provides a UI on top of the mini_erp_analyzer backend engine.
 
-✨ Features
+ $Features
 
 Analyze ERPNext codebase directly from VS Code
 
@@ -16,7 +16,7 @@ TreeView explorer for browsing entities
 
 Designed to integrate with AI (RAG, embeddings, LLM)
 
-🏗 Architecture
+$ Architecture
 VS Code Extension (UI)
         ↓
 Python Analyzer Engine
@@ -38,7 +38,7 @@ Python 3.x (Conda or system)
 
 Backend repo: mini_erp_analyzer
 
-🚀 Setup Instructions
+$ Setup Instructions
 1. Clone Extension Repo
 git clone https://github.com/your-username/erpnext-code-intelligence.git
 cd erpnext-code-intelligence
@@ -65,7 +65,7 @@ Ctrl + Shift + P → Analyze ERPNext Code
 
 The analyzer UI panel will open and display results.
 
-🔗 Backend Dependency
+$ Backend Dependency
 
 This extension requires the backend engine:
 
@@ -81,7 +81,7 @@ and contains:
 
 Analyzer/analyzer.py
 
-🧠 Tech Stack
+$ Tech Stack
 
 VS Code Extension API
 
@@ -95,7 +95,7 @@ FAISS (backend)
 
 Ollama (backend)
 
-📌 Future Roadmap
+$ Future Roadmap
 
 AI Chat panel
 
