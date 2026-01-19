@@ -1,71 +1,113 @@
-# erpnext-code-intelligence README
+ERPNext Code Intelligence — VS Code Extension
 
-This is the README for your extension "erpnext-code-intelligence". After writing up a brief description, we recommend including the following sections.
+AI-powered code intelligence extension for ERPNext that brings static analysis, code exploration, and AI-assisted understanding directly into VS Code.
 
-## Features
+This extension provides a UI on top of the mini_erp_analyzer backend engine.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+✨ Features
 
-For example if there is an image subfolder under your extension project workspace:
+Analyze ERPNext codebase directly from VS Code
 
-\!\[feature X\]\(images/feature-x.png\)
+Extract functions and classes using Python AST
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Display results in an interactive UI panel
 
-## Requirements
+TreeView explorer for browsing entities
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Designed to integrate with AI (RAG, embeddings, LLM)
 
-## Extension Settings
+🏗 Architecture
+VS Code Extension (UI)
+        ↓
+Python Analyzer Engine
+        ↓
+AST Parsing + RAG Pipeline
+        ↓
+Code Intelligence Output
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-For example:
+The extension acts as a frontend client for the backend analyzer.
 
-This extension contributes the following settings:
+⚙ Requirements
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+Node.js (LTS)
 
-## Known Issues
+VS Code
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Python 3.x (Conda or system)
 
-## Release Notes
+Backend repo: mini_erp_analyzer
 
-Users appreciate release notes as you update your extension.
+🚀 Setup Instructions
+1. Clone Extension Repo
+git clone https://github.com/your-username/erpnext-code-intelligence.git
+cd erpnext-code-intelligence
+npm install
 
-### 1.0.0
+2. Open in VS Code
+code .
 
-Initial release of ...
+3. Run Extension
 
-### 1.0.1
+Press:
 
-Fixed issue #.
+F5
 
-### 1.1.0
 
-Added features X, Y, and Z.
+A new VS Code window will open (Extension Development Host).
 
----
+4. Run Analyzer
 
-## Following extension guidelines
+Press:
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+Ctrl + Shift + P → Analyze ERPNext Code
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
-## Working with Markdown
+The analyzer UI panel will open and display results.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+🔗 Backend Dependency
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+This extension requires the backend engine:
 
-## For more information
+mini_erp_analyzer
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
-**Enjoy!**
+Make sure it exists at:
+
+D:/ERPNEXT/mini_erp_analyzer
+
+
+and contains:
+
+Analyzer/analyzer.py
+
+🧠 Tech Stack
+
+VS Code Extension API
+
+TypeScript
+
+Node.js
+
+Python AST
+
+FAISS (backend)
+
+Ollama (backend)
+
+📌 Future Roadmap
+
+AI Chat panel
+
+Semantic code search
+
+Call graph visualization
+
+Inline code insights
+
+Bug discovery assistant
+
+👨‍💻 Author
+
+Karri Ravi Shankar
+AI Intern — Code Intelligence Platform
