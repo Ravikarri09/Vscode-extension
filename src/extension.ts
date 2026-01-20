@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import * as cp from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs';
+import { openChatPanel } from './chatPanel';
+
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -51,6 +53,13 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     context.subscriptions.push(disposable);
+    let chatCmd = vscode.commands.registerCommand(
+    'erpnext.openChat',
+    () => openChatPanel()
+);
+
+context.subscriptions.push(chatCmd);
+
 }
 
 function getLoadingHtml() {
