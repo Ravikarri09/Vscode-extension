@@ -1,113 +1,104 @@
 ERPNext Code Intelligence — VS Code Extension
+Overview
 
-AI-powered code intelligence extension for ERPNext that brings static analysis, code exploration, and AI-assisted understanding directly into VS Code.
+This VS Code extension provides an AI-powered developer assistant for ERPNext.
+It integrates with the ERPNext Code Intelligence backend and allows developers to analyze and chat with the ERPNext codebase directly inside VS Code.
 
-This extension provides a UI on top of the mini_erp_analyzer backend engine.
+Features
 
- $Features
+Code Analyzer Panel (AST-based analysis)
 
-Analyze ERPNext codebase directly from VS Code
+AI Chat Panel
 
-Extract functions and classes using Python AST
+Continuous conversation
 
-Display results in an interactive UI panel
+Streaming responses
 
-TreeView explorer for browsing entities
+File references in answers
 
-Designed to integrate with AI (RAG, embeddings, LLM)
+Code highlighting
 
-$ Architecture
-VS Code Extension (UI)
+RAG-powered semantic search
+
+**System Architecture
+VS Code Extension
+        ↓ HTTP
+Python AI Backend
         ↓
-Python Analyzer Engine
+RAG Pipeline
         ↓
-AST Parsing + RAG Pipeline
-        ↓
-Code Intelligence Output
+ERPNext Semantic Index**
+
+Commands
+Command	Description
+Analyze ERPNext Code	Runs the AST analyzer
+Open ERPNext AI Assistant	Opens the AI chat panel
+Project Structure
+erpnext-code-intelligence/
+ ├── src/
+ │   ├── extension.ts
+ │   ├── chatPanel.ts
+ ├── out/
+ ├── package.json
+ └── README.md
+
+Usage
+
+Start backend server:
+
+python api.py
 
 
-The extension acts as a frontend client for the backend analyzer.
-
-⚙ Requirements
-
-Node.js (LTS)
-
-VS Code
-
-Python 3.x (Conda or system)
-
-Backend repo: mini_erp_analyzer
-
-$ Setup Instructions
-1. Clone Extension Repo
-git clone https://github.com/your-username/erpnext-code-intelligence.git
-cd erpnext-code-intelligence
-npm install
-
-2. Open in VS Code
-code .
-
-3. Run Extension
-
-Press:
+Launch extension:
 
 F5
 
 
-A new VS Code window will open (Extension Development Host).
+Open command palette:
 
-4. Run Analyzer
-
-Press:
-
-Ctrl + Shift + P → Analyze ERPNext Code
+Ctrl + Shift + P
 
 
-The analyzer UI panel will open and display results.
+Run:
 
-$ Backend Dependency
+Open ERPNext AI Assistant
 
-This extension requires the backend engine:
+Example Queries
 
-mini_erp_analyzer
+How is Sales Invoice validated?
 
+Where is tax calculated?
 
-Make sure it exists at:
+Which files use flt()?
 
-D:/ERPNEXT/mini_erp_analyzer
+Explain checkout workflow
 
-
-and contains:
-
-Analyzer/analyzer.py
-
-$ Tech Stack
-
-VS Code Extension API
+Tech Stack
 
 TypeScript
 
+VS Code WebView
+
 Node.js
 
-Python AST
+Python AI Backend
 
-FAISS (backend)
+RAG + LLM
 
-Ollama (backend)
+Purpose
 
-$ Future Roadmap
+This extension helps ERPNext developers:
 
-AI Chat panel
+Understand complex workflows
 
-Semantic code search
+Navigate large codebases
 
-Call graph visualization
+Debug faster
 
-Inline code insights
+Learn system architecture
 
-Bug discovery assistant
+Use AI directly inside their editor
 
-👨‍💻 Author
+Summary
 
-Karri Ravi Shankar
-AI Intern — Code Intelligence Platform
+This extension brings AI-powered code intelligence into VS Code, turning ERPNext into a searchable and conversational knowledge base for developers.
